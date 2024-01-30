@@ -1,0 +1,33 @@
+.titleActionsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actionsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 600px) {
+  .homeContainer {
+    padding-bottom: 2rem;
+  }
+
+  .titleActionsWrapper {
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .actionsWrapper {
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
