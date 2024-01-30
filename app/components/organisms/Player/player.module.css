@@ -1,0 +1,21 @@
+.player {
+  margin-left: 34px;
+}
+
+.playInfoWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 38px;
+}
+
+@media (max-width: 600px) {
+  .player {
+    margin-left: unset;
+    margin: 2rem 0 0;
+  }
+
+  .playInfoWrapper {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,17 @@
+.musicPlayer {
+  padding: 73px 0 94px;
+}
+
+.albumPlayerWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .albumPlayerWrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
