@@ -1,0 +1,11 @@
+.albumCover {
+  border-radius: 5px;
+  border: 1px solid var(--Base-Gray-gray-80, #666);
+}
+
+@media (max-width: 600px) {
+  .albumCover {
+    width: 100%;
+    height: auto;
+  }
+}
