@@ -1,10 +1,11 @@
 const http = require("http");
 const fs = require("fs");
 const hostname = "127.0.0.1";
-const port = 3000;
+const port = 3001;
 const payload = JSON.parse(
   fs.readFileSync("./server-payload.json", { encoding: "utf8" })
 );
+const SERVER_URL = `http://${hostname}:${port}`;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
@@ -29,9 +30,21 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  if (req.url.includes("/related")) {
+    const url = new URL(`${SERVER_URL}${req.url}`);
+    const searchParams = url.searchParams;
+    const relatedSongsIds = searchParams.get("songs").split(":");
+
+    const relatedSongs = payload?.songs?.filter((song) =>
+      relatedSongsIds.includes(song.id.toString())
+    );
+    res.end(JSON.stringify(relatedSongs));
+    return;
+  }
+
   res.end(JSON.stringify([]));
 });
 
 server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+  console.log(`Server running at ${SERVER_URL}/`);
 });
