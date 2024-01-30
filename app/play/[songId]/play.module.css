@@ -1,0 +1,39 @@
+.playContainer {
+  background: linear-gradient(90deg, #12303b 0%, rgba(18, 48, 59, 0) 100%);
+  height: 100%;
+  overflow: clip;
+}
+
+.playBg {
+  background-position: right 16px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .playContainer {
+    height: unset;
+    overflow: auto;
+  }
+
+  .playBg {
+    background-position: center top;
+    background-size: contain;
+  }
+
+  .mainWrapper {
+    width: 100%;
+    padding: 1rem;
+  }
+}
