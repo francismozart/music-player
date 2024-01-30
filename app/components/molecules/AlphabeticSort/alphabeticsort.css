@@ -1,0 +1,44 @@
+.alphabeticSortContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 11px;
+}
+
+.alphabeticSortContainer .MuiSwitch-switchBase.Mui-checked {
+  color: var(--text-color1, "#fff");
+}
+
+.alphabeticSortContainer .MuiSwitch-track {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.alphabeticSortContainer .MuiSwitch-root {
+  padding: 0;
+  width: 58px;
+  height: 32px;
+  border-radius: 25px;
+}
+
+.alphabeticSortContainer .MuiSwitch-thumb {
+  height: 32px;
+  width: 32px;
+}
+
+.alphabeticSortContainer .MuiSwitch-switchBase {
+  padding: 0;
+}
+
+.alphabeticSortContainer .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: var(--bg-switch);
+  opacity: 1;
+}
+
+.alphabeticSortContainer .text {
+  color: var(--text-color1, #fff);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}

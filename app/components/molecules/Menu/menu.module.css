@@ -1,0 +1,25 @@
+.menu {
+  background-color: var(--bg-menu, #1d1d1d);
+  display: flex;
+  padding: 29px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoChildrenWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 54px;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    padding: 1rem 0px;
+  }
+
+  .logoChildrenWrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

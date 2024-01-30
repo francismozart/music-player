@@ -1,0 +1,27 @@
+.autocomplete {
+  position: relative;
+}
+
+.autocompleteBox {
+  border-radius: 5px;
+  background: #2d2d2d;
+  padding: 0 14px;
+  position: absolute;
+  top: 38px;
+  width: 100%;
+  z-index: 1;
+}
+
+.autocompleteBox ul {
+  list-style: none;
+}
+
+.autocompleteBox ul li {
+  padding: 15px 0;
+  border-bottom: 0.5px solid #545454;
+  color: #d1d1d1;
+}
+
+.autocompleteBox ul li:last-child {
+  border-bottom: none;
+}
